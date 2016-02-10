@@ -27,7 +27,7 @@ module.exports = function (plugins) {
     var protocol = require('electron').protocol
     var plugins = plugins || []
 
-    protocol.interceptBufferProtocol('file', function (request, callback) {
+    protocol.interceptBufferProtocol('html', function (request, callback) {
       var file = getPath(request.url)
       var content = null
 
