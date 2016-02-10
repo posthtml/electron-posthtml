@@ -1,5 +1,5 @@
 {
-  "name": "express-posthtml",
+  "name": "electron-posthtml",
   "version": "0.0.1",
   "description": "PostHTML file interceptor for Electron",
   "main": "index.js",

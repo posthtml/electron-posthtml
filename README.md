@@ -1,7 +1,7 @@
 [![Electron Logo](http://electron.atom.io/images/electron-logo.svg)](http://electron.atom.io/) <img align="right" width="220" height="200" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
 
 # [PostHTML](https://github.com/posthtml/posthtml) Electron
-File Interceptor for [electron](electron.atom.io)
+File Interceptor for [Electron](electron.atom.io)
 
 [PostHTML Plugins Catalog](https://maltsev.github.io/posthtml-plugins/)
 
