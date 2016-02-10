@@ -27,7 +27,7 @@ module.exports = function (plugins) {
     var protocol = require('electron').protocol
     var plugins = plugins || []
 
-    protocol.interceptBufferProtocol('html', function (request, callback) {
+    protocol.interceptBufferProtocol('file', (request, callback) => {
       var file = getPath(request.url)
       var content = null
 
@@ -56,7 +56,7 @@ module.exports = function (plugins) {
         // NET_ERROR(FAILED, -2)
         return callback(2)
       }
-    }, function (error, scheme) {
+    }, (error, scheme) => {
       if (!error) {
         console.log('PostHTML interceptor success')
       } else {
