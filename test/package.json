@@ -1,0 +1,37 @@
+{
+  "name": "electron",
+  "version": "0.36.7",
+  "description": "Electron Boilerplate",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "client/index.js",
+    "client/index.html",
+    "client/index.css"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore=dist --prune --asar --all --version=0.36.3"
+  },
+  "dependencies": {
+    "electron-posthtml": "^0.8.0",
+    "posthtml-bem": "^0.2.2",
+    "posthtml-include": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron-debug": "^0.5.1",
+    "electron-packager": "^5.2.0",
+    "electron-prebuilt": "^0.36.7"
+  },
+  "author": {
+    "name": "Michael Ciniawsky",
+    "email": "michael.ciniawsky@gmail.com",
+    "url": "michael-ciniawsky.de"
+  },
+  "keywords": [
+    "Electron"
+  ]
+}

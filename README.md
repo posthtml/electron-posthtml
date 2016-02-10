@@ -17,13 +17,16 @@ File Interceptor for [Electron](electron.atom.io)
 ```javascript
 
 var app = require('electron').app
-var posthtml = require('electron-posthtml')([/* PostHTML Plugins */])
-
 var BrowserWindow = require('electron').BrowserWindow
 
-app.on('ready', function () {
+var posthtml = require('electron-posthtml')([/* PostHTML Plugins */])
+
+app.on('ready', () => {
   view = new BrowserWindow({ width: 800, height: 600 })
 
   view.loadUrl('file://' + __dirname + '/index.html')
 })
 ```
+
+# Example
+[Test](https://github.com/michael-ciniawsky/electron-posthtml//tree/master/test)

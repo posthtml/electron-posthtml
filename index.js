@@ -13,8 +13,8 @@ var getPath = function (url) {
   var parsed = require('url').parse(url)
   var result = parsed.pathname
 
-  // Local files in windows start with slash if no host is given
-  // file:///c:/file.html
+  // Local files in windows start with a slash if no host is given
+  // file:///C:/file.html
   if (process.platform === 'win32' && !parsed.host.trim()) {
     result = result.substr(1)
   }
@@ -23,26 +23,27 @@ var getPath = function (url) {
 }
 
 module.exports = function (plugins) {
+  plugins = plugins || []
+
   app.on('ready', function () {
-    var protocol = require('electron').protocol
-    var plugins = plugins || []
+    const protocol = require('electron').protocol
 
-    protocol.interceptBufferProtocol('file', (request, callback) => {
+    protocol.interceptBufferProtocol('file', function (request, callback) {
       var file = getPath(request.url)
-      var content = null
+      var source = null
 
-      // See if file actually exists
+      // Check if file exists
       try {
-        content = fs.readFileSync(file)
+        source = fs.readFileSync(file)
 
         var ext = path.extname(file)
 
         if (ext === '.html') {
-          var compiled = posthtml(plugins).process(file).then(result => result.html)
-
-          return callback({data: new Buffer(compiled), mimeType:'text/html'})
+          posthtml(plugins)
+            .process(source)
+            .then(result => callback({data: new Buffer(result.html), mimeType: 'text/html'}))
         } else {
-          return callback({data: content, mimeType: mime.lookup(ext)})
+          return callback({data: source, mimeType: mime.lookup(ext)})
         }
       } catch (e) {
         // See here for error numbers:
@@ -58,9 +59,9 @@ module.exports = function (plugins) {
       }
     }, (error, scheme) => {
       if (!error) {
-        console.log('PostHTML interceptor success')
+        console.log('PostHTML loaded')
       } else {
-        console.error('PostHTML interceptor error:', error)
+        console.error('PostHTML error:', error)
       }
     })
   })
