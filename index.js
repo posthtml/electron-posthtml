@@ -36,6 +36,7 @@ module.exports = function (plugins) {
         content = fs.readFileSync(file)
 
         var ext = path.extname(file)
+
         if (ext === '.html') {
           var compiled = posthtml(plugins).process(file).then(result => result.html)
 
@@ -57,7 +58,7 @@ module.exports = function (plugins) {
       }
     }, function (error, scheme) {
       if (!error) {
-        console.log('PostHTML interceptor registered successfully')
+        console.log('PostHTML interceptor success')
       } else {
         console.error('PostHTML interceptor error:', error)
       }
