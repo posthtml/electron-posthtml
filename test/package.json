@@ -1,7 +1,7 @@
 {
-  "name": "electron",
-  "version": "0.36.7",
-  "description": "Electron Boilerplate",
+  "name": "electron-posthtml-test",
+  "version": "1.0.0",
+  "description": "Electron file interceptor for PostHTML",
   "license": "MIT",
   "main": "index.js",
   "files": [
@@ -14,16 +14,14 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore=dist --prune --asar --all --version=0.36.3"
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore=dist --prune --asar --all --version=0.36.7"
   },
   "dependencies": {
-    "electron-posthtml": "^0.8.0",
-    "posthtml-bem": "^0.2.2",
-    "posthtml-include": "^1.0.2"
+    "electron-posthtml": "^1.0.0",
+    "posthtml-package-html": "^0.2.0"
   },
   "devDependencies": {
     "electron-debug": "^0.5.1",
-    "electron-packager": "^5.2.0",
     "electron-prebuilt": "^0.36.7"
   },
   "author": {

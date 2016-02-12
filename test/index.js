@@ -1,15 +1,14 @@
 'use strict'
 
-var app = require('electron').app
+const app = require('electron').app
 
-var bem = require('posthtml-bem')
-var include = require('posthtml-include')
+const html = require('posthtml-package-html')({
+  include: { root: './client/', encoding: 'utf-8' }
+})
 
-var posthtml = require('electron-posthtml')([include({root: './client/'}), bem()])
+const posthtml = require('../index')(html)
 
 const BrowserWindow = require('electron').BrowserWindow
-
-// require('electron').crashReporter.start()
 
 app.on('ready', () => {
   // Main Window
