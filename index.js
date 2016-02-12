@@ -4,10 +4,11 @@
 
 var fs = require('fs')
 var path = require('path')
+var mime = require('mime')
+
+var posthtml = require('posthtml')
 
 var app = require('electron').app
-var mime = require('mime')
-var posthtml = require('posthtml')
 
 var getPath = function (url) {
   var parsed = require('url').parse(url)
@@ -61,7 +62,7 @@ module.exports = function (plugins) {
       if (!error) {
         console.log('PostHTML loaded')
       } else {
-        console.error('PostHTML error:', error)
+        console.error('PostHTML error', error)
       }
     })
   })
