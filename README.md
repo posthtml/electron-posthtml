@@ -1,23 +1,16 @@
-[![Electron Logo](http://electron.atom.io/images/electron-logo.svg)](http://electron.atom.io/) <img align="right" width="220" height="200" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
+[![npm][npm]][npm-1]
+[![dependencies][deps]][deps-1]
 
-# [PostHTML](https://github.com/posthtml/posthtml) Electron
-File Interceptor for [Electron](electron.atom.io)
-
-[PostHTML Plugins](https://maltsev.github.io/posthtml-plugins/)
-
-[PostHTML Packages](https://michael-ciniawsky.github.io/posthtml-packages)
+<img align="bottom" width="220" title="ElectronJS" src="https://worldvectorlogo.com/logos/electron-4.svg" /> <img align="right" width="220" height="125" title="PostHTML" src="http://posthtml.github.io/posthtml/logo.svg">
 
 # Install
 
 ```bash
-
 (sudo) npm i -S electron-posthtml
 ```
 
-[![npm](https://badge.fury.io/js/electron-posthtml.svg)](https://badge.fury.io/js/electron-posthtml) [![dependencies](https://david-dm.org/michael-ciniawsky/electron-posthtml.svg)](https://david-dm.org/michael-ciniawsky/electron-posthtml)
-
 # Usage
-This modules intercepts the **_file://_** Protocol using [Electrons Protocol API](http://electron.atom.io/docs/v0.36.7/api/protocol/). All HTML files will automatically be processed by [PostHTML](PostHTML).
+This modules intercepts the **_file://_** Protocol using [Electrons Protocol API][api]. All HTML files will automatically be processed by [PostHTML](PostHTML).
 
 ```js
 'use strict'
@@ -25,7 +18,7 @@ This modules intercepts the **_file://_** Protocol using [Electrons Protocol API
 const app = require('electron').app
 const BrowserWindow = require('electron').BrowserWindow
 
-const posthtml = require('electron-posthtml')([/* PostHTML Plugins */])
+const posthtml = require('electron-posthtml')([/* Plugins */])
 
 app.on('ready', () => {
   // Main Window
@@ -36,3 +29,9 @@ app.on('ready', () => {
 ```
 
 # [Example](https://github.com/michael-ciniawsky/electron-posthtml//tree/master/test)
+
+[npm]: https://badge.fury.io/js/electron-posthtml.svg
+[npm-1]: https://badge.fury.io/js/electron-posthtml
+[deps]: https://david-dm.org/michael-ciniawsky/electron-posthtml.svg
+[deps-1]: https://david-dm.org/michael-ciniawsky/electron-posthtml
+[api]: http://electron.atom.io/docs/v0.36.7/api/protocol/
