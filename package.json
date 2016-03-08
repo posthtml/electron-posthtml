@@ -1,7 +1,7 @@
 {
   "name": "electron-posthtml",
   "version": "1.0.1",
-  "description": "Electron file interceptor for PostHTML",
+  "description": "PostHTML file interceptor for Electron",
   "main": "index.js",
   "dependencies": {
     "mime": "^1.3.4",
