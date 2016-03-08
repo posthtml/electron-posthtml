@@ -2,17 +2,17 @@
 // #POSTHTML - ELECTRON
 // ------------------------------------
 
-var fs = require('fs')
-var path = require('path')
-var mime = require('mime')
+const fs = require('fs')
+const path = require('path')
+const mime = require('mime')
 
-var posthtml = require('posthtml')
+const posthtml = require('posthtml')
 
-var app = require('electron').app
+let app = require('electron').app
 
-var getPath = function (url) {
-  var parsed = require('url').parse(url)
-  var result = parsed.pathname
+let getPath = function (url) {
+  let parsed = require('url').parse(url)
+  let result = parsed.pathname
 
   // Local files in windows start with a slash if no host is given
   // file:///C:/file.html
@@ -30,14 +30,14 @@ module.exports = function (plugins) {
     const protocol = require('electron').protocol
 
     protocol.interceptBufferProtocol('file', function (request, callback) {
-      var file = getPath(request.url)
-      var source = null
+      let file = getPath(request.url)
+      let source = null
 
       // Check if file exists
       try {
         source = fs.readFileSync(file)
 
-        var ext = path.extname(file)
+        let ext = path.extname(file)
 
         if (ext === '.html') {
           posthtml(plugins)
