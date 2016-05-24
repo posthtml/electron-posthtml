@@ -1,14 +1,13 @@
 'use strict'
 
 const app = require('electron').app
+const BrowserWindow = require('electron').BrowserWindow
 
 const html = require('posthtml-package-html')({
   include: { root: './client/', encoding: 'utf-8' }
 })
 
-const posthtml = require('../index')(html)
-
-const BrowserWindow = require('electron').BrowserWindow
+require('../index')(html)
 
 app.on('ready', () => {
   // Main Window

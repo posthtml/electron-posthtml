@@ -1,8 +1,8 @@
-# PostHTML Electron Example
+# Electron PostHTML Example
 ## Install
 
 ```
-$ (sudo) npm i
+$ npm i
 ```
 
 ## Start

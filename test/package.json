@@ -1,35 +1,27 @@
 {
   "name": "electron-posthtml-test",
   "version": "1.0.0",
-  "description": "Electron file interceptor for PostHTML",
-  "license": "MIT",
+  "description": "PostHTML Plugin for Electron",
   "main": "index.js",
   "files": [
     "client/index.js",
     "client/index.html",
     "client/index.css"
   ],
-  "engines": {
-    "node": ">=4"
-  },
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore=dist --prune --asar --all --version=0.36.7"
+    "start": "electron ."
   },
   "dependencies": {
-    "electron-posthtml": "^1.0.0",
-    "posthtml-package-html": "^0.2.0"
+    "electron-posthtml": "^1.0.2",
+    "posthtml-package-html": "^0.3.0"
   },
   "devDependencies": {
-    "electron-debug": "^0.5.1",
-    "electron-prebuilt": "^0.36.7"
+    "electron-prebuilt": "^1.1.1"
   },
   "author": {
     "name": "Michael Ciniawsky",
     "email": "michael.ciniawsky@gmail.com",
     "url": "michael-ciniawsky.de"
   },
-  "keywords": [
-    "Electron"
-  ]
+  "license": "MIT"
 }
