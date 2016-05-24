@@ -1,5 +1,5 @@
 // ------------------------------------
-// #POSTHTML - ELECTRON
+// #ELECTRON - POSTHTML
 // ------------------------------------
 
 const fs = require('fs')
