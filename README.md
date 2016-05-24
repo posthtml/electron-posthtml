@@ -5,7 +5,7 @@
 [![Standard Code Style][style]][style-url]
 
 <div align="center">
-  <img align="bottom" width="220" title="Electron" src="https://worldvectorlogo.com/logos/electron-4.svg" />
+  <img width="220" title="Electron" src="https://worldvectorlogo.com/logos/electron-4.svg" />
   <img width="220" height="125" title="PostHTML" src="http://posthtml.github.io/posthtml/logo.svg">
 </div>
 
