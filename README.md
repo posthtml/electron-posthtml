@@ -5,18 +5,18 @@
 [![Standard Code Style][style]][style-url]
 
 <div align="center">
-  <img width="260" title="Electron" src="https://worldvectorlogo.com/logos/electron-4.svg" />
+  <img width="240" title="Electron" src="https://worldvectorlogo.com/logos/electron-4.svg" />
   <img width="220" height="125" title="PostHTML" src="http://posthtml.github.io/posthtml/logo.svg">
-  <h1>Electron PostHTML Plugin</h1>
+  <h1>Electron PostHTML</h1>
 </div>
 
-## Install
+<h2 align="center">Install</h2>
 
 ```bash
 npm i -S electron-posthtml
 ```
 
-## Usage
+<h2 align="center">Usage</h2>
 
 This modules intercepts the **_file://_** Protocol using [Electrons Protocol API][api]. All HTML files will automatically processed by PostHTML.
 
@@ -38,9 +38,13 @@ app.on('ready', () => {
 })
 ```
 
-## [Example](https://github.com/posthtml/electron-posthtml//tree/master/test)
+<h2 align="center">
+  <a href="https://github.com/posthtml/electron-posthtml//tree/master/test">
+    Example
+  </a>
+</h2>
 
-## LICENSE
+<h2 align="center">LICENSE</h2>
 
 > MIT License (MIT)
 
